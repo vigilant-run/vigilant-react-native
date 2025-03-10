@@ -1,5 +1,14 @@
 export { Attributes } from './attributes'
-export { Logger, LoggerOptions } from './logger'
+export {
+  initLogger,
+  shutdownLogger,
+  logInfo,
+  logWarn,
+  logError,
+  logDebug,
+  enableLogAutocapture,
+  disableLogAutocapture,
+} from './logger'
 export { initErrorHandler, shutdownErrorHandler, captureError } from './errors'
 export {
   initMetricsHandler,

@@ -1,7 +1,7 @@
 {
   "name": "vigilant-react-native",
   "author": "Vigilant",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React Native SDK for Vigilant",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
