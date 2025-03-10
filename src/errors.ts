@@ -1,5 +1,4 @@
 import { Attributes } from './attributes'
-import axios from 'axios'
 
 var globalErrorHandler: ErrorHandler | null = null
 
@@ -107,8 +106,10 @@ class ErrorHandler {
 
     try {
       const endpoint = formatEndpoint(this.endpoint, this.insecure)
-      await axios.post(endpoint, payload, {
+      await fetch(endpoint, {
+        method: 'POST',
         headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
       })
     } catch (err) {}
   }
